@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snake</title>
+<title>SerpentX</title>
 <style>
 :root{--bg:#10231c;--panel:#17332a;--grid:#1c3d32;--snake:#e8f5a3;--head:#ffffff;--food:#ff7a59;--text:#e6f2ea;--muted:#8fb3a2}
 @media (prefers-color-scheme: light){:root{--bg:#dfeee3;--panel:#c9e0d0;--grid:#bcd6c4;--snake:#1f5c3f;--head:#0b3b26;--food:#d9462a;--text:#12301f;--muted:#4c7560}}
@@ -41,7 +41,7 @@ button.ghost{background:transparent;border:2px solid #ffffff77}
 .overlay.menu .menu-only{display:block}
 .hs{color:#ffd84d;font-size:.95rem}
 .overlay.menu{background:rgba(0,0,0,.45)}
-.overlay.menu h1{font-size:3.6rem;letter-spacing:.05em;color:#e8f5a3;background:linear-gradient(90deg,#e8f5a3,#7be0a5 55%,#ff8a73);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:none;filter:drop-shadow(0 3px 0 rgba(0,0,0,.45))}
+.overlay.menu h1{font-size:3.6rem;letter-spacing:.04em;color:#e8f5a3;background:linear-gradient(90deg,#e8f5a3,#7be0a5 55%,#ff8a73);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:none;filter:drop-shadow(0 3px 0 rgba(0,0,0,.45))}
 .overlay.menu #btn{font-size:1.4rem;padding:12px 46px;border-radius:999px;box-shadow:0 0 0 0 rgba(255,122,89,.6);animation:throb 1.8s ease-out infinite}
 @keyframes throb{0%{box-shadow:0 0 0 0 rgba(255,122,89,.6)}70%,100%{box-shadow:0 0 0 16px rgba(255,122,89,0)}}
 @media (prefers-reduced-motion:reduce){.overlay.menu #btn{animation:none}}
@@ -66,7 +66,7 @@ button.ghost{background:transparent;border:2px solid #ffffff77}
 <div class="wrap">
   <canvas id="c" width="420" height="420"></canvas>
   <div class="overlay menu" id="ov">
-    <h1 id="title">Snake</h1>
+    <h1 id="title">SerpentX</h1>
     <div class="res hide" id="res">
       <div class="badge hide" id="nb">New best score!</div>
       <div class="score" id="rs">0</div>
@@ -322,7 +322,7 @@ function setCtrl(){
 function exitToMenu(){
   running=false;paused=false;clearInterval(timer);hideRes();
   reset();setCtrl();
-  $('title').textContent='Snake';
+  $('title').textContent='SerpentX';
   $('msg').textContent='Eat apples. Dodge rocks. Beat your best.';
   $('btn').textContent='Play now';
   $('ov').classList.remove('hide');startDemo();
