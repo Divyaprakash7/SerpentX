@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<<<<<<< HEAD
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#10231c">
+=======
+<meta name="viewport" content="width=device-width, initial-scale=1">
+>>>>>>> 6a03845096eac681067bd4cc5501249d9d029c4e
 <title>SerpentX</title>
 <style>
 :root{--bg:#10231c;--panel:#17332a;--grid:#1c3d32;--snake:#e8f5a3;--head:#ffffff;--food:#ff7a59;--text:#e6f2ea;--muted:#8fb3a2}
 @media (prefers-color-scheme: light){:root{--bg:#dfeee3;--panel:#c9e0d0;--grid:#bcd6c4;--snake:#1f5c3f;--head:#0b3b26;--food:#d9462a;--text:#12301f;--muted:#4c7560}}
+<<<<<<< HEAD
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{--bw:min(92vw,420px)}
 @supports (height:100dvh){@media (pointer:coarse){:root{--bw:max(250px,min(calc(100vw - 16px),520px,calc(100dvh - 270px - max(8px,env(safe-area-inset-top)) - max(8px,env(safe-area-inset-bottom)))))}}}
@@ -18,6 +23,14 @@ body{background:var(--bg);color:var(--text);font-family:Georgia,"Times New Roman
 .bar{display:flex;justify-content:space-between;width:var(--bw);font-size:1.1rem}
 .bar span b{font-variant-numeric:tabular-nums}
 .wrap{position:relative;width:var(--bw);aspect-ratio:1}
+=======
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--text);font-family:Georgia,"Times New Roman",serif;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:12px;touch-action:none;user-select:none}
+.bar{display:flex;justify-content:space-between;width:min(92vw,420px);font-size:1.1rem}
+.bar span b{font-variant-numeric:tabular-nums}
+.wrap{position:relative;width:min(92vw,420px);aspect-ratio:1}
+>>>>>>> 6a03845096eac681067bd4cc5501249d9d029c4e
 canvas{width:100%;height:100%;display:block;background:var(--panel);border-radius:10px}
 .overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(0,0,0,.55);border-radius:10px;color:#fff;text-align:center;padding:16px}
 .overlay.hide{display:none}
@@ -50,12 +63,16 @@ button.ghost{background:transparent;border:2px solid #ffffff77}
 .overlay.menu #btn{font-size:1.4rem;padding:12px 46px;border-radius:999px;box-shadow:0 0 0 0 rgba(255,122,89,.6);animation:throb 1.8s ease-out infinite}
 @keyframes throb{0%{box-shadow:0 0 0 0 rgba(255,122,89,.6)}70%,100%{box-shadow:0 0 0 16px rgba(255,122,89,0)}}
 @media (prefers-reduced-motion:reduce){.overlay.menu #btn{animation:none}}
+<<<<<<< HEAD
 .dpad{display:none;grid-template-columns:repeat(3,64px);grid-template-areas:". up ." "left down right";gap:8px}
 .dpad button{height:52px;padding:0;font-size:1.5rem;background:transparent;border:2px solid var(--muted);color:var(--text);border-radius:12px}
 .dpad button:active{background:var(--food);border-color:var(--food);color:#fff}
 .dpad [data-k=up]{grid-area:up}.dpad [data-k=left]{grid-area:left}.dpad [data-k=down]{grid-area:down}.dpad [data-k=right]{grid-area:right}
 .tc{display:none}
 .ctrl{display:flex;gap:8px;width:var(--bw)}
+=======
+.ctrl{display:flex;gap:8px;width:min(92vw,420px)}
+>>>>>>> 6a03845096eac681067bd4cc5501249d9d029c4e
 .ctrl button{flex:1;padding:7px 10px;font-size:.95rem;background:transparent;border:2px solid var(--muted);color:var(--text)}
 .ctrl button:disabled{opacity:.4;cursor:default}
 .ctrl button:not(:disabled):hover{border-color:var(--food)}
@@ -63,12 +80,17 @@ button.ghost{background:transparent;border:2px solid #ffffff77}
 .diff button{padding:8px 10px;min-width:92px;font-size:1rem;background:transparent;border:2px solid #ffffff55;color:#fff;display:flex;flex-direction:column;gap:2px;align-items:center}
 .diff small{font-size:.68rem;font-weight:normal;opacity:.85}
 .diff button.on{background:var(--food);border-color:var(--food)}
+<<<<<<< HEAD
 .speed{display:flex;align-items:center;gap:10px;width:var(--bw)}
+=======
+.speed{display:flex;align-items:center;gap:10px;width:min(92vw,420px)}
+>>>>>>> 6a03845096eac681067bd4cc5501249d9d029c4e
 .speed input{flex:1;accent-color:var(--food)}
 .speed b{min-width:1.5em;text-align:right;font-variant-numeric:tabular-nums}
 .credit{color:var(--muted);font-size:.85rem;text-align:center;letter-spacing:.03em}
 .credit b{color:var(--text)}
 .hint{color:var(--muted);font-size:.9rem;text-align:center}
+<<<<<<< HEAD
 
 /* ---------- mobile / touch ---------- */
 @media (pointer:coarse){
@@ -131,6 +153,8 @@ button.ghost{background:transparent;border:2px solid #ffffff77}
   .overlay.end .diff{display:none}
 }
 }
+=======
+>>>>>>> 6a03845096eac681067bd4cc5501249d9d029c4e
 </style>
 </head>
 <body>
@@ -164,6 +188,7 @@ button.ghost{background:transparent;border:2px solid #ffffff77}
   <button id="bp">Pause</button><button id="br">Restart</button><button id="bx">Exit</button>
 </div>
 <label class="speed">Speed <input type="range" id="spd" min="1" max="10" step="1" value="5"><b id="spdv">5</b></label>
+<<<<<<< HEAD
 <div class="dpad" id="dpad">
   <button data-k="up" aria-label="Up">&#8593;</button>
   <button data-k="left" aria-label="Left">&#8592;</button>
@@ -171,12 +196,18 @@ button.ghost{background:transparent;border:2px solid #ffffff77}
   <button data-k="right" aria-label="Right">&#8594;</button>
 </div>
 <div class="hint"><span class="kb">Arrow keys / WASD to steer · Space or P to pause · R to restart · Esc to exit</span><span class="tc">Swipe the board or tap the arrows</span></div>
+=======
+<div class="hint">Arrow keys / WASD to steer · Space or P to pause · R to restart · Esc to exit · Swipe on touch screens</div>
+>>>>>>> 6a03845096eac681067bd4cc5501249d9d029c4e
 <div class="credit">Powered by <b>The Complie Line</b></div>
 <script>
 const N=21, S=420/N, cv=document.getElementById('c'), ctx=cv.getContext('2d');
 const $=id=>document.getElementById(id);
+<<<<<<< HEAD
 const dpr=Math.min(2,window.devicePixelRatio||1);
 cv.width=cv.height=420*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+=======
+>>>>>>> 6a03845096eac681067bd4cc5501249d9d029c4e
 let tickN=0,snake,dir,next,food,score,timer,running=false,paused=false,best=0,rocks=[];
 const LV={
   easy:{bonus:0,ramp:2,rocks:0,floor:35,note:'Classic rules.'},
@@ -422,6 +453,7 @@ addEventListener('keydown',e=>{
   else if(k==='escape'&&running){exitToMenu()}
 });
 $('btn').onclick=()=>{paused?pause():start()};
+<<<<<<< HEAD
 let sx=null,sy=null;
 const wrapEl=document.querySelector('.wrap');
 wrapEl.addEventListener('touchstart',e=>{const t=e.touches[0];sx=t.clientX;sy=t.clientY},{passive:true});
@@ -441,6 +473,16 @@ document.querySelectorAll('#dpad button').forEach(b=>b.addEventListener('pointer
   if(running&&!paused)turn(...DIRS[b.dataset.k]);
 }));
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&running&&!paused)pause()});
+=======
+let t0;
+addEventListener('touchstart',e=>{t0=e.touches[0]},{passive:true});
+addEventListener('touchend',e=>{
+  if(!t0||!running||paused)return;
+  const dx=e.changedTouches[0].clientX-t0.clientX,dy=e.changedTouches[0].clientY-t0.clientY;
+  if(Math.max(Math.abs(dx),Math.abs(dy))<20)return;
+  Math.abs(dx)>Math.abs(dy)?turn(dx>0?1:-1,0):turn(0,dy>0?1:-1);
+},{passive:true});
+>>>>>>> 6a03845096eac681067bd4cc5501249d9d029c4e
 reset();startDemo();
 </script>
 </body>
